@@ -45,9 +45,15 @@ def check_guess():
         # check the guess
         if guess < number_to_guess:
             result_label.config(text="Too Low - Try again!")
+            # clear entry box
+            guess_entry.delete(0, END)
+            guess_entry.focus_set()
         
         elif guess > number_to_guess:
             result_label.config(text="Too High - Try Again!")
+            # clear entry box
+            guess_entry.delete(0, END)
+            guess_entry.focus_set()
         
         else:
             result_label.config(text=f"Correct! The number was {number_to_guess} and you guessed it in {number_of_guesses} guesses!")
