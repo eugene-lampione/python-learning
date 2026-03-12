@@ -92,6 +92,8 @@ def setup_gui():
     guess_entry = Entry(root, font=("Helvetica",18))
     guess_entry.pack(pady=10)
 
+    guess_entry.bind('<Return>', lambda event=None: submit_button.invoke())
+
     # create another label
     result_label = Label(root,text="")
     result_label.pack(pady=20)
@@ -99,6 +101,7 @@ def setup_gui():
     # create buttons
     submit_button = Button(root,text="Submit Guess", command=check_guess)
     submit_button.pack(pady=20)
+
 
     playAgain_button = Button(root,text="Play Again", command=reset_game)
     playAgain_button.pack()
