@@ -40,6 +40,7 @@ def generatePassword(length):
         # fill in the rest of the password character from all character sets
         # get remaining character count
         remainingLength = length - 4
+        # abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
         password += random.choices(string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation,k=remainingLength)
         # password = ["s","G","6","%","9","$","H","1"]
         
